@@ -1,1 +1,161 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind | Craft Coffee & Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a3728; /* Espresso */
+            --secondary: #d4a373; /* Latte */
+            --light: #fefae0; /* Cream */
+            --dark: #283618; /* Roast */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background-color: var(--light);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 20px; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 400; }
+
+        /* Hero Section */
+        header {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--primary); }
+
+        /* Menu Section */
+        .section { padding: 80px 10%; text-align: center; }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 10%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">THE DAILY GRIND</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Better Coffee, Better Days.</h1>
+        <p>Ethically sourced. Locally roasted. Served with love.</p><br>
+        <a href="#menu" class="btn">View Our Menu</a>
+    </header>
+
+    <section id="about" class="section">
+        <h2>Our Story</h2>
+        <p>Since 2018, we've been dedicated to the perfect pour-over and the crunchiest sourdough in the city. We believe a cafe should be more than just a place for caffeine—it's your third home.</p>
+    </section>
+
+    <section id="menu" class="section" style="background: #f1f1f1;">
+        <h2>The Classics</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Oat Milk Latte</h3>
+                <p>Smooth espresso with creamy steamed oat milk.</p>
+                <strong>$5.50</strong>
+            </div>
+            <div class="menu-item">
+                <h3>Avocado Toast</h3>
+                <p>Smashed avo, chili flakes, and a poached egg.</p>
+                <strong>$12.00</strong>
+            </div>
+            <div class="menu-item">
+                <h3>Cold Brew</h3>
+                <p>Steeped for 18 hours for maximum smoothness.</p>
+                <strong>$4.75</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>Visit Us</h3>
+        <p>123 Espresso Lane, Coffee District</p>
+        <p>Open Daily: 7:00 AM - 6:00 PM</p>
+        <p>&copy; 2026 The Daily Grind</p>
+    </footer>
+
+</body>
+</html>
