@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Daily Grind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">THE DAILY GRIND</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <h1>Book a Table</h1>
+        <form id="contactForm" class="cafe-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <select id="service">
+                <option value="table">Table Reservation</option>
+                <option value="event">Private Event</option>
+                <option value="feedback">General Feedback</option>
+            </select>
+            <textarea id="message" placeholder="Special requests..." rows="5"></textarea>
+            <button type="submit" class="btn">Send Request</button>
+        </form>
+        <div id="successMessage" style="display:none; margin-top: 20px; color: green; font-weight: bold;">
+            Thank you! Your request has been sent.
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real scenario, you'd send this data to a server
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
