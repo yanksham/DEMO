@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Brew & Bean Cafe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f5f0;
+        }
+
+        /* Navigation */
+        nav {
+            background: #2c1810;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        nav .logo {
+            color: #f4e4d7;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #f4e4d7;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #c7a17a;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #2c1810, #4a3428);
+            color: #f4e4d7;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            color: #2c1810;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #c7a17a;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item h3 {
+            font-size: 1.3rem;
+            color: #2c1810;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: #c7a17a;
+            font-weight: bold;
+        }
+
+        .menu-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c1810;
+            color: #f4e4d7;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer .social-links {
+            margin-top: 1rem;
+        }
+
+        footer .social-links a {
+            color: #c7a17a;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">☕ Brew & Bean</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Our Menu</h1>
+        <p>Handcrafted beverages and fresh baked goods</p>
+    </section>
+
+    <section class="menu-section">
+        <div class="container">
+            <!-- Coffee Section -->
+            <div class="menu-category">
+                <h2 class="category-title">☕ Coffee</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Espresso</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p>Rich and bold shot of premium espresso</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Cappuccino</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p>Espresso with steamed milk and velvety foam</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Latte</h3>
+                            <span class="price">$4.75</span>
+                        </div>
+                        <p>Smooth espresso with steamed milk</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Americano</h3>
+                            <span class="price">$3.75</span>
+                        </div>
+                        <p>Espresso diluted with hot water</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Mocha</h3>
+                            <span class="price">$5.25</span>
+                        </div>
+                        <p>Espresso with chocolate and steamed milk</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Cold Brew</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p>Smooth, refreshing cold-steeped coffee</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pastries Section -->
+            <div class="menu-category">
+                <h2 class="category-title">🥐 Pastries & Baked Goods</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Croissant</h3>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <p>Buttery, flaky French pastry</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Blueberry Muffin</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p>Fresh baked with real blueberries</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Chocolate Chip Cookie</h3>
+                            <span class="price">$2.75</span>
+                        </div>
+                        <p>Classic cookie with premium chocolate</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Cinnamon Roll</h3>
+                            <span class="price">$4.25</span>
+                        </div>
+                        <p>Warm, gooey cinnamon roll with icing</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Banana Bread</h3>
+                            <span class="price">$3.75</span>
+                        </div>
+                        <p>Moist and flavorful homemade bread</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Scone</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p>Traditional British scone, various flavors</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialty Drinks Section -->
+            <div class="menu-category">
+                <h2 class="category-title">🍵 Specialty Drinks</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Chai Latte</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p>Spiced tea with steamed milk</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Matcha Latte</h3>
+                            <span class="price">$5.25</span>
+                        </div>
+                        <p>Premium Japanese green tea latte</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Hot Chocolate</h3>
+                            <span class="price">$4.25</span>
+                        </div>
+                        <p>Rich chocolate with whipped cream</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Iced Tea</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p>Refreshing brewed tea, sweetened or unsweetened</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Brew & Bean Cafe. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
